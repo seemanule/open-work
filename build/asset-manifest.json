@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a1338b3e.css",
+    "main.js": "/static/js/main.44deb57b.js",
+    "static/media/Satoshi-Regular.woff": "/static/media/Satoshi-Regular.ca3da5fd2b609836ef69.woff",
+    "static/media/Satoshi-Bold.woff": "/static/media/Satoshi-Bold.a875ff682ee232938607.woff",
+    "static/media/Satoshi-Regular.woff2": "/static/media/Satoshi-Regular.9ec05085c4cd2966eba8.woff2",
+    "static/media/Satoshi-Bold.woff2": "/static/media/Satoshi-Bold.a0e6d25529eab537426c.woff2",
+    "index.html": "/index.html",
+    "main.a1338b3e.css.map": "/static/css/main.a1338b3e.css.map",
+    "main.44deb57b.js.map": "/static/js/main.44deb57b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a1338b3e.css",
+    "static/js/main.44deb57b.js"
+  ]
+}
