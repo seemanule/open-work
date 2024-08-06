@@ -27,7 +27,7 @@ function App() {
       });
     });
   }, []);
-
+  const [isLoading, setIsLoading] = useState(true);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -42,13 +42,19 @@ function App() {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-
+    
     window.addEventListener('resize', handleResize);
+    window.addEventListener('load', handlePageLoad);
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('load', handlePageLoad);
     };
   }, []);
+
+   const handlePageLoad = () => {
+    setIsLoading(false);
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -94,6 +100,13 @@ function App() {
 
   return (
     <div className="App">
+      {isLoading && (
+        <div className="loader-container">
+          <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Loading..." className="loader-logo" />
+        </div>
+      )}
+      {!isLoading && (
+        <>
       <nav className="navbar navbar-expand-lg navbar-light bg-white">
         <div className="container">
           <a className="navbar-brand mx-auto d-flex align-items-center" href="#">
@@ -105,6 +118,10 @@ function App() {
               <li className="nav-item">
                 <a className="button1 mr-20" href="#contact">
                 <span className="buttontext1">Contact Us</span></a>
+              </li>
+               <li className="nav-item">
+                    <a class="button2"  href="https://app.openwork.technology/" target='_blank' rel="noreferrer" >
+              <span className="buttontext2">Open App </span><span className="arrow">↗</span></a>
               </li>
           
             </ul>
@@ -140,7 +157,7 @@ function App() {
             <div className="col-12">
               <div className="platform-top">
               <img src={`${process.env.PUBLIC_URL}/images/icon1.png`} alt="Platform Icon" className="platform-icon" />
-              <h4 className="platform-title">About the platform</h4>
+              <h4 className="platform-title">About OpenWork</h4>
               </div>
               <p className="platform-subtitle">Free from central authority, OpenWork introduces a new paradigm of work engagement and management.</p>
               <a className="button" href="https://drive.google.com/file/d/1tdpuAM3UqiiP_TKJMa5bFtxOG4bU_6ts/view" target='_blank' rel="noreferrer" >
@@ -433,6 +450,8 @@ function App() {
           <p>©2024 All Copyrights Reserved by OpenWork</p>
         </div>
       </footer>
+      </>
+      )}
     </div>
   );
 }
