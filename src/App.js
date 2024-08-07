@@ -28,6 +28,7 @@ function App() {
     });
   }, []);
   const [isLoading, setIsLoading] = useState(true);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -36,25 +37,34 @@ function App() {
 
   const [responseMessage, setResponseMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  
 
   useEffect(() => {
+  
+
+    const handlePageLoad = () => {
+      setIsLoading(false);
+    };
+    if (document.readyState === 'complete') {
+      setIsLoading(false);
+    } else {
+      window.addEventListener('load', handlePageLoad);
+    }
+
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
     
     window.addEventListener('resize', handleResize);
-    window.addEventListener('load', handlePageLoad);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
       window.removeEventListener('load', handlePageLoad);
+      window.removeEventListener('resize', handleResize);
+     
     };
+    
   }, []);
-
-   const handlePageLoad = () => {
-    setIsLoading(false);
-  };
+ 
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -100,7 +110,7 @@ function App() {
 
   return (
     <div className="App">
-      {isLoading && (
+       {isLoading && (
         <div className="loader-container">
           <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Loading..." className="loader-logo" />
         </div>
@@ -119,9 +129,10 @@ function App() {
                 <a className="button1 mr-20" href="#contact">
                 <span className="buttontext1">Contact Us</span></a>
               </li>
-               <li className="nav-item">
-                    <a class="button2"  href="https://app.openwork.technology/" target='_blank' rel="noreferrer" >
-              <span className="buttontext2">Open App </span><span className="arrow">↗</span></a>
+              <li className="nav-item">
+              <a class="button2"  href="https://app.openwork.technology/" target='_blank' rel="noreferrer" >
+        <span className="buttontext2">Open App </span><span className="arrow">↗</span>
+    </a>
               </li>
           
             </ul>
@@ -445,12 +456,13 @@ function App() {
           </div>
         </div>
       </section>
+   
       <footer className="footer">
         <div className="container text-center">
           <p>©2024 All Copyrights Reserved by OpenWork</p>
         </div>
       </footer>
-      </>
+    </>
       )}
     </div>
   );
