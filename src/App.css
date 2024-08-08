@@ -24,7 +24,7 @@ body {
 p{font-size: 16px;color:#767676}
 .navbar {
   height: 80px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border: 1px solid #f0f0f0;
 }
 
 .navbar-brand {
@@ -66,7 +66,7 @@ span.arrow {
   font-weight: bold;
 }
 .hero-section {
-  padding: 2rem 0;
+  padding-top: 6rem;
   background-color: #fff;
 }
 
@@ -187,7 +187,7 @@ flex-grow: 0;
   flex-grow: 0;color:#fff;font-weight: 600;
 }
 .contactbutton:hover{background: linear-gradient(180deg, #0347f0 -23.96%, #3366e7 134.37%);}
-.buttontext{color:#fff;text-decoration: none !important; }
+.buttontext{color:#fff;text-decoration: none !important;font-weight: 700; }
 a:hover{text-decoration: none !important;}
 .platform-top{
   display: flex;
@@ -245,7 +245,7 @@ p.platform-subtitle {
 }
 
 .platform-section {
-  padding: 2rem 0;
+  padding-top: 6rem;
 }
 
 .platform-title {
@@ -303,7 +303,7 @@ text-align: left;
   z-index: 1;
 }
 .how-it-works-section {
-  padding: 2rem 0;
+  padding-top: 6rem;
 }
 .how-it-works-section .button{
   display: block;
@@ -328,7 +328,7 @@ color: #767676;
 
 
 #faq-section {
-  padding: 2rem 0;
+  padding-top: 6rem;
 }
 
 #faq-section .faq-title {
@@ -397,8 +397,8 @@ padding-bottom: 32px;
 }
 
 
-#contact-section {
-  padding: 2rem 0;
+.contact-section {
+  padding-top: 6rem;
 }
 
 .contact-info {
@@ -482,7 +482,7 @@ color: #868686;
   border-color: #0056b3;
 }
 .footer {
-  padding: 2rem 0;
+  padding-top: 6rem;
   background-color: #fff;
 }
 
