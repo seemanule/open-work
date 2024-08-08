@@ -420,7 +420,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="contact-section pt-5" id="contact">
+      <section className="contact-section" id="contact">
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-6">
