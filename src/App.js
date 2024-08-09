@@ -131,7 +131,9 @@ function App() {
               </li>
               <li className="nav-item">
               <a class="button2"  href="https://app.openwork.technology/" target='_blank' rel="noreferrer" >
-        <span className="buttontext2">Open App </span><span className="arrow">↗</span>
+        <span className="buttontext2">Open App </span><span className="arrow"> <img 
+                      src={`${process.env.PUBLIC_URL}/images/icon.png`} 
+                      alt="icon" ></img></span>
     </a>
               </li>
           
@@ -149,7 +151,9 @@ function App() {
               </p>
               <div className="buttoncenter">
               <a class="button"  href="https://drive.google.com/file/d/1tdpuAM3UqiiP_TKJMa5bFtxOG4bU_6ts/view" target='_blank' rel="noreferrer" >
-        <span className="buttontext">Read Whitepaper </span><span className="arrow">↗</span>
+        <span className="buttontext">Read Whitepaper </span><span className="arrow"><img 
+                      src={`${process.env.PUBLIC_URL}/images/icon.png`} 
+                      alt="icon" ></img></span>
     </a></div>
             </div>
           </div>
@@ -172,7 +176,9 @@ function App() {
               </div>
               <p className="platform-subtitle">Free from central authority, OpenWork introduces a new paradigm of work engagement and management.</p>
               <a className="button" href="https://drive.google.com/file/d/1tdpuAM3UqiiP_TKJMa5bFtxOG4bU_6ts/view" target='_blank' rel="noreferrer" >
-              <span className="buttontext">Read Whitepaper</span> <span className="arrow">↗</span>
+              <span className="buttontext">Read Whitepaper</span> <span className="arrow"><img 
+                      src={`${process.env.PUBLIC_URL}/images/icon.png`} 
+                      alt="icon" ></img></span>
               </a>
             </div>
           </div>
@@ -217,7 +223,9 @@ function App() {
           <h2 className="how-it-works-title">How it works</h2>
           <p className="how-it-works-subtitle">OpenWork is a decentralized work protocol redefining the way people collaborate on the internet.</p>
           <a className="button" href="https://drive.google.com/file/d/1tdpuAM3UqiiP_TKJMa5bFtxOG4bU_6ts/view" target='_blank' rel="noreferrer" >
-              <span className="buttontext">Read Whitepaper</span> <span className="arrow">↗</span>
+              <span className="buttontext">Read Whitepaper</span> <span className="arrow"><img 
+                      src={`${process.env.PUBLIC_URL}/images/icon.png`} 
+                      alt="icon" ></img></span>
               </a>
           </div></section>
       <section className="how-it-works-section">
@@ -245,7 +253,7 @@ function App() {
                       className="img-fluid fullwidth"
                       style={{ display: 'inline-block', height: '100%' }}
                     />
-                    <p>Swipe the image to right</p>
+                    <p>Swipe right to see more</p>
                 </div>
             </div>
           </div>
