@@ -532,7 +532,7 @@ img.platform-icon {
 }
 .card{
   background-position: bottom right;
-  height: 450px;
+  height: 500px;
 }
 .hero-image img {
  width: 100%;
@@ -609,4 +609,11 @@ a.button1.mr-20 {
   100% {
     transform: scale(1);
   }
+}
+
+.arrow img {
+  height: 12px;
+  width: auto;
+  object-fit: contain;
+  padding-left: 8px;
 }
