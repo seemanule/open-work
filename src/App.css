@@ -623,7 +623,7 @@ a.button1.mr-20 {
 }
 
 .hero-buttons a {
-  width: 48%; /* Adjust button width */
+  width: 160px;
 }
 
 @media (max-width: 768px) {
