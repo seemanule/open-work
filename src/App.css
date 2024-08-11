@@ -164,7 +164,6 @@ flex-grow: 0;
   border:4px solid #007bff;
   border-radius: 12px;
   flex: none;
-  order: 1;
   flex-grow: 0;
   margin:32px 0px;
 }
@@ -616,4 +615,23 @@ a.button1.mr-20 {
   width: auto;
   object-fit: contain;
   padding-left: 8px;
+}
+.hero-buttons {
+  display: none; /* Hide by default */
+  justify-content: space-around;
+  margin: 3rem 0;
+}
+
+.hero-buttons a {
+  width: 48%; /* Adjust button width */
+}
+
+@media (max-width: 768px) {
+  .hero-buttons {
+    display: flex; /* Show buttons only on mobile view */
+  }
+  .hero-buttons a{margin:0;}
+  #hero .buttontext {
+    font-size: 14px;
+}
 }
