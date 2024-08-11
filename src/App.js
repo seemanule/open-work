@@ -131,7 +131,7 @@ function App() {
               </li>
               <li className="nav-item">
               <a class="button2"  href="https://app.openwork.technology/" target='_blank' rel="noreferrer" >
-        <span className="buttontext2">Open App </span><span className="arrow"> <img 
+        <span className="buttontext2">Launch App </span><span className="arrow"> <img 
                       src={`${process.env.PUBLIC_URL}/images/icon.png`} 
                       alt="icon" ></img></span>
     </a>
@@ -150,11 +150,18 @@ function App() {
                 OpenWork enables two strangers to safely enter work contracts, pay in crypto, use escrow services, resolve disputes, build reputations, and maintain self-custody of their profiles, all without the need for a centralized authority of any kind.
               </p>
               <div className="buttoncenter">
-              <a class="button"  href="https://drive.google.com/file/d/1tdpuAM3UqiiP_TKJMa5bFtxOG4bU_6ts/view" target='_blank' rel="noreferrer" >
+              <a class="button onlydesktop"  href="https://drive.google.com/file/d/1tdpuAM3UqiiP_TKJMa5bFtxOG4bU_6ts/view" target='_blank' rel="noreferrer" >
         <span className="buttontext">Read Whitepaper </span><span className="arrow"><img 
                       src={`${process.env.PUBLIC_URL}/images/icon.png`} 
                       alt="icon" ></img></span>
     </a></div>
+
+{isMobile && (
+            <div className="hero-buttons" id="hero">
+           <a href="https://drive.google.com/file/d/1tdpuAM3UqiiP_TKJMa5bFtxOG4bU_6ts/view" className="btn button" target='_blank' rel="noreferrer" ><span className="buttontext">Read Whitepaper </span><span className="arrow"></span></a>
+           <a href="#contact"  className="btn button1 justify-content-center"> <span className="buttontext1">Contact Us</span></a>
+            </div>
+          )}
             </div>
           </div>
           <div className="row">
